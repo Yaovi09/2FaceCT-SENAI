@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*saber o é box-sizing*/
+}
+
+#root, body, html{
+   min-height: 100vh;
+}
