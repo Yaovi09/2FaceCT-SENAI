@@ -1,0 +1,12 @@
+.espacoDiv{
+  background-color: beige;
+  height: 200px;
+ margin: 20px;
+ border-radius: 10px;
+padding: 5px 10px 5px 10px;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
