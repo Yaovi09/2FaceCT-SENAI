@@ -6,14 +6,15 @@ function Body() {
   const[input, setInput] = usestste("")
 const[espacoinput, setEspacoInput] = useState("")
   const [ normal, setNormal] = useState([])
-  /*const [preferencial, setPreferencial] = useState()*/
+  
     
   function AddNormal(){
-if(espacoinput == " "){
-    alert("POR FAVOR DIGITE A SUA SENHA!!!")else
+if(input == " "){
+    alert("POR FAVOR, DIGITE A SUA SENHA!!!")else
+    
 {
-    setEspacoInput(espacoinput)
-    normal.push(espacoinput)
+    setInput(input)
+    normal.push(input)
 
 }
 }
@@ -27,8 +28,8 @@ if(espacoinput == " "){
     
       <div className="espaco-button">
         <input type="Number" placeholder="Senha" className="inpt"
-        value={normal}
-        onChange={(e)=>setNormal(e.target.value)}
+        value={input}
+        onChange={(e)=>setInput(e.target.value)}
         />
        <button onClick={AddNormal}>Normal</button>
        <button>Preferencial</button>
