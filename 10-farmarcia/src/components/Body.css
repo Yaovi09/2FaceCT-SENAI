@@ -1,4 +1,5 @@
 .container-body{
     min-height: calc(100vh - 70px);
     background-color: var(--cor-6);
+    color: var(--cor-4);
 }
