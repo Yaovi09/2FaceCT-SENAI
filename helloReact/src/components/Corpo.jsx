@@ -9,7 +9,7 @@ function Corpo() {
       <p>Vamos começar a nosso aventura!</p>
     
       <button onClick={alertarUsuario}>Entrar</button>
-      <img src="./inovacao.jpeg" className='imagem'  onClick={alertarUsuario} />
+      
     </div>
   );
 }

@@ -1,0 +1,31 @@
+.container-Header{
+    height: 20%;
+    background-color: var(--cor-2);
+    display: flex;
+   
+}
+img{
+    height: 100%;
+   width: 100%;
+}
+
+.espaco-nome-farmacia{
+    height: 100%;
+    width: 85%;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #18191a;
+    font-family: monospace;
+}
+/*.EspacoParagraf{
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+h1{
+    color: #fff;
+}

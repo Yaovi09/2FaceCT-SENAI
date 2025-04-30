@@ -1,43 +1,75 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Produto from "./components/produto";
 
 function App() {
+  
+  const [inputModelo, setInputModelo] = useState("");
+  const [inputPreco, setInputPreco] = ("");
+
   const [produtos, setProdutos] = useState([
-    {
-modelo: "Melancia",
-preco: 509
-    }
-    , 
-    {
-      modelo: "Pneu",
-      preco: 9009
-    }
-    , 
-    {
-      modelo: "Notebook",
-      preco: 764
-    }
-    , 
-    {
-      modelo: "Desktop pra jogar ",
-      preco: 600
-    }
+
+  {id:Date.now(), modelo: "Melancia", preco: 509 },
+  {id:Date.now()+1, modelo: "Pneu",preco: 9009},
+  {id:Date.now()+2, modelo: "Notebook",preco: 764},
+  {id:Date.now()+3, modelo: "Desktop pra jogar ",preco: 600 },
+  {id:Date.now()+4, modelo: "Garrafa", preco: 50}
+
   ])
+
+  useEffect(()=>
+    console.log(produtos)
+  ,[produtos])
+
+  useEffect(()=>
+    console.log("Carregando dados...")
+    ,[])
+
 const testar = () =>{
-console.log(produtos)
+//console.log(produtos);
+let produto = {
+  id: Date.now(),
+   modelo: "Produto Secreto",
+   preco: 10
+}
+setProdutos([...produtos, produto])
+
+}
+
+function AddNoProduto(){
+  let produto = {
+    id: Date.now(),
+     modelo: inputModelo,
+     preco: Number(inputPreco)
+  }
+  setProdutos([...produtos, produto])
+  
 }
   return (
     <div className="container-app">
-      <Produto modelo={"Galaxy A15"} preco={809}/>
-      <Produto modelo={`Smart TV 32'' Full HD LED TCL`} preco={971.10}/>
-      <Produto modelo={produtos[0].modelo} preco={produtos[0].preco}/>
-      <Produto modelo={produtos[1].modelo} preco={produtos[1].preco}/>
-      <button onClick={testar}>TESTAR</button>
+      <div className="form-produto">
+        <label htmlFor="modelo">Modelo</label>
+        <input type="text"
+        value={inputModelo}
+        onChange={(e)=> setInputModelo(e.target.value)}
+         />
+         <label htmlFor="preco">Preco</label>
+        <input type="Number"
+        value={inputPreco}
+        onChange={(e)=>setInputPreco(e.target.value)}
+         />
+        <button onClick={AddNoProduto}>Cadastrar</button>
+      </div>
+     
+
+      <div className="cards">
+      <button onClick={testar} className="buttom-produto">TESTAR</button>
       {
-        produtos.map((item, index) => (
-          <Produto key={index} modelo={item.modelo} preco={item.preco}/>
+        produtos.map((item) => (
+          <Produto key={item.id} modelo={item.modelo} preco={item.preco} id={item.id}/>
         )) }
+      </div>
+      
     </div>
   );
 }

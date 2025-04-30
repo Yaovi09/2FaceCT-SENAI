@@ -1,0 +1,10 @@
+.container-Footer{
+    height: 20%;
+    
+    background-color: var(--cor-3);
+}
+
+.imgBody{
+    height: 100%;
+    width: 100%;
+}
