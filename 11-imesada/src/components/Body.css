@@ -1,0 +1,55 @@
+.container-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+   
+}
+.espaco-button{
+    display: flex;
+    gap: 50px;
+}
+
+input{
+    height: 40px;
+    width: 390px;
+    border: 1px solid black;
+    outline: none;
+    padding-left: 15px;
+    font-size: 18px;
+    background-color: rgb(241, 225, 225);
+    
+}
+
+button{
+    
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    border: 1px solid black;
+    
+}
+
+
+
+.credi{
+    background-color: red;
+    color: #ffff;
+    font-size: 18px;
+}
+
+.debito{
+    background-color: green;
+    color: #ffff;
+    font-size: 18px;
+}
+
+.espaco-saldo{
+    display: flex;
+    
+}
+
+img{
+    height: 30px;
+}
