@@ -3,22 +3,21 @@ import "./Body.css";
 import { useState } from "react";
 
 function Body() {
-  const[input, setInput] = usestste("")
-const[espacoinput, setEspacoInput] = useState("")
+  const[input, setInput] = useState('');
   const [ normal, setNormal] = useState([])
   
     
   function AddNormal(){
-if(input == " "){
-    alert("POR FAVOR, DIGITE A SUA SENHA!!!")else
-    
-{
-    setInput(input)
-    normal.push(input)
+if(input == ' '){
+  alert("DIGIGITE SUA SENHA E PARTICIPA AO NOSSO SORTEIO!!")
+}else{
+    setNormal([... normal, input])
+    setInput('');
+}
 
 }
-}
-}
+
+
   return (
     <div className="container-Body">
       <div className="espaco-pesquisa">
@@ -40,6 +39,14 @@ if(input == " "){
         <img src="farmarcia-camisetas.webp" className="camisetas" />
         <img src="farmarcia-cartoes.webp" className="camisetas" />
       </div>
+
+      {
+        normal.map((item)=>{
+          return(
+            <div className="espacoDiv">{item}</div>
+          )
+        })
+      }
     </div>
   );
 }

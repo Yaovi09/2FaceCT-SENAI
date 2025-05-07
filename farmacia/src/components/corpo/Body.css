@@ -64,3 +64,11 @@ color: rgb(209, 214, 218);
 .inpt{
     width: 180px;
 }
+ .espacoDiv{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: aqua;
+width: 120px;
+font-size: 50px;
+        }
